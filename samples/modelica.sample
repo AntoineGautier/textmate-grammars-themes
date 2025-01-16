@@ -1,0 +1,27 @@
+within Buildings.Templates.Plants.HeatPumps.Interfaces;
+partial model PartialHeatPumpPlant
+  "Interface class for heat pump plant"
+  extends Buildings.Fluid.HeatExchangers.CoolingTowers.BaseClasses.CoolingTower;
+  import cha=Buildings.Fluid.HeatExchangers.CoolingTowers.BaseClasses.Characteristics;
+  final parameter Modelica.SIunits.MassFlowRate mAir_flow_nominal=m_flow_nominal / ratWatAir_nominal
+    "Nominal mass flow rate of air"
+    annotation (Dialog(group="Fan"));
+  parameter Modelica.SIunits.Temperature TWatOut_nominal
+    "Nominal water outlet temperature"
+    annotation (Dialog(group="Heat transfer"));
+  parameter Real fraFreCon(
+    min=0,
+    max=1,
+    final unit="1")=if true then 0.125 else 0
+    "Fraction of tower capacity in free convection regime"
+    annotation (Dialog(group="Heat transfer"));
+  replaceable package MediumSou=Modelica.Media.Interfaces.PartialMedium
+    constrainedby Modelica.Media.Interfaces.PartialMedium
+    "Medium model for source-side fluid");
+  type Chiller = enumeration(
+      AirCooled
+      "Air-cooled compression chiller",
+      WaterCooled
+      "Water-cooled compression chiller")
+    "Enumeration to specify the type of chiller";
+end PartialHeatPumpPlant;

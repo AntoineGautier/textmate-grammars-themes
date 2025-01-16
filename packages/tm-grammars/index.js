@@ -2135,6 +2135,22 @@ export const grammars = [
     source: 'https://github.com/textmate/mips.tmbundle/blob/eb7601016a109bf912a48a1c21988f3c4a59fb3a/Syntaxes/MIPS.tmLanguage',
   },
   {
+    aliases: [
+      'mo',
+    ],
+    byteSize: 2767,
+    categories: [
+      'general',
+    ],
+    displayName: 'Modelica',
+    hash: 'Zip4QdEPXz',
+    lastUpdate: '2023-08-30T13:34:41Z',
+    name: 'modelica',
+    scopeName: 'source.modelica',
+    sha: '946f5b84656489fc7a4a119b98ab514f86d38bb0',
+    source: 'https://github.com/lbl-srg/modelica-buildings-templates/blob/946f5b84656489fc7a4a119b98ab514f86d38bb0/static/modelica.tmLanguage.json',
+  },
+  {
     byteSize: 70494,
     displayName: 'Mojo',
     hash: 'AI2YknoI0Y',

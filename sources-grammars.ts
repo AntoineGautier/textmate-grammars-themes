@@ -197,6 +197,12 @@ export const sourcesVSCode: GrammarSource[] = [
     categories: ['web', 'markup'],
   },
   {
+    name: 'modelica',
+    aliases: ['mo'],
+    source: 'https://github.com/lbl-srg/modelica-buildings-templates/blob/master/static/modelica.tmLanguage.json',
+    categories: ['general'],
+  },
+  {
     name: 'objective-c',
     aliases: ['objc'],
     source: 'https://github.com/microsoft/vscode/blob/main/extensions/objective-c/syntaxes/objective-c.tmLanguage.json',
